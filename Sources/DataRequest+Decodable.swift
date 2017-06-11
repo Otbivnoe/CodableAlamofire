@@ -9,29 +9,6 @@
 import Foundation
 import Alamofire
 
-public enum AlamofireDecodableError: Error {
-    case invalidKeyPath
-    case emptyKeyPath
-}
-
-// TODO: correct description
-extension AlamofireDecodableError: LocalizedError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .invalidKeyPath:   return ""
-        case .emptyKeyPath:     return ""
-        }
-    }
-    
-    public var failureReason: String? {
-        switch self {
-        case .invalidKeyPath:   return ""
-        case .emptyKeyPath:     return ""
-        }
-    }
-}
-
 extension DataRequest {
     
     private static func DecodableObjectSerializer<T: Decodable>(_ keyPath: String?, _ decoder: JSONDecoder) -> DataResponseSerializer<T> {

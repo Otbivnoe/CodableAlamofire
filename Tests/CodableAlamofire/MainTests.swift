@@ -23,12 +23,20 @@ private struct Repo: Decodable {
     }
 }
 
+private struct NotMappableRepo: Decodable {
+    let commit: String
+}
+
 final class MainTests: XCTestCase {
     
     static var allTests = [
         ("testResponseSimpleObject", testResponseSimpleObject),
         ("testResponseArrayOfObjects", testResponseArrayOfObjects),
-        ("testResponseArrayOfObjectsByKeypath", testResponseArrayOfObjectsByKeypath)
+        ("testResponseArrayOfObjectsByKeypath", testResponseArrayOfObjectsByKeyPath),
+        ("testResponseWithEmptyKeyPath", testResponseWithEmptyKeyPath),
+        ("testResponseWithInvalidKeyPath", testResponseWithInvalidKeyPath),
+        ("testResponseWithWrongPropertyKeyObject", testResponseWithWrongPropertyKeyObject),
+        ("testResponseWithWrongPropertyKeyObjectByKeyPath", testResponseWithWrongPropertyKeyObjectByKeyPath)
     ]
     
     func testResponseSimpleObject() {
@@ -84,8 +92,9 @@ final class MainTests: XCTestCase {
             XCTAssertNil(error)
         }
     }
-    func testResponseArrayOfObjectsByKeypath() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypath.json")!
+    
+    func testResponseArrayOfObjectsByKeyPath() {
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         let decoder = JSONDecoder()
@@ -106,6 +115,86 @@ final class MainTests: XCTestCase {
             XCTAssertEqual(repos?.last?.url.absoluteString, "https://github.com/ReactiveX/RxSwift")
             XCTAssertEqual(repos?.last?.randomDateCommit.timeIntervalSince1970, 1494547200)
             
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testResponseWithEmptyKeyPath() {
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+        let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
+        
+        Alamofire.request(url).responseDecodableObject(keyPath: "") { (response: DataResponse<[Repo]>) in
+            XCTAssertNotNil(response.error)
+            if case AlamofireDecodableError.emptyKeyPath = response.error! {
+                XCTAssertTrue(true)
+            }
+            else {
+                XCTAssertTrue(false)
+            }
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testResponseWithInvalidKeyPath() {
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+        let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
+        
+        Alamofire.request(url).responseDecodableObject(keyPath: "keypath") { (response: DataResponse<[Repo]>) in
+            XCTAssertNotNil(response.error)
+            if case AlamofireDecodableError.invalidKeyPath = response.error! {
+                XCTAssertTrue(true)
+            }
+            else {
+                XCTAssertTrue(false)
+            }
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testResponseWithWrongPropertyKeyObject() {
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/object.json")!
+        let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
+        
+        Alamofire.request(url).responseDecodableObject { (response: DataResponse<NotMappableRepo>) in
+            XCTAssertNotNil(response.error)
+            if case DecodingError.keyNotFound = response.error! {
+                XCTAssertTrue(true)
+            }
+            else {
+                XCTAssertTrue(false)
+            }
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+    
+    func testResponseWithWrongPropertyKeyObjectByKeyPath() {
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathObject.json")!
+        let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
+        
+        Alamofire.request(url).responseDecodableObject(keyPath: "result.library") { (response: DataResponse<NotMappableRepo>) in
+            XCTAssertNotNil(response.error)
+            if case DecodingError.keyNotFound = response.error! {
+                XCTAssertTrue(true)
+            }
+            else {
+                XCTAssertTrue(false)
+            }
             expectation.fulfill()
         }
         
