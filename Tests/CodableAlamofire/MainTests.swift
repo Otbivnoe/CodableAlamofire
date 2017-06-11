@@ -25,6 +25,12 @@ private struct Repo: Decodable {
 
 final class MainTests: XCTestCase {
     
+    static var allTests = [
+        ("testResponseSimpleObject", testResponseSimpleObject),
+        ("testResponseArrayOfObjects", testResponseArrayOfObjects),
+        ("testResponseArrayOfObjectsByKeypath", testResponseArrayOfObjectsByKeypath)
+    ]
+    
     func testResponseSimpleObject() {
         let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/object.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")

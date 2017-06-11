@@ -10,9 +10,6 @@
 		8472D28A1EED2FF800E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */; };
 		8472D2991EED300500E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8271EED2EC300AB31BE /* CodableAlamofire.framework */; };
 		8472D2A81EED301000E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8431EED2ED500AB31BE /* CodableAlamofire.framework */; };
-		8472D2B41EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
-		8472D2B51EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
-		8472D2B61EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
 		8472D2DA1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
 		8472D2DB1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
 		8472D2DC1EED3BF200E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
@@ -105,7 +102,6 @@
 		8472D2941EED300500E81232 /* CodableAlamofireTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2A31EED301000E81232 /* CodableAlamofireTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2AF1EED306500E81232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8472D2B31EED314E00E81232 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		8472D2B81EED3B4C00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2B91EED3B5B00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2BA1EED3B8200E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -119,6 +115,7 @@
 		84A8C8431EED2ED500AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodableAlamofire.h; sourceTree = "<group>"; };
 		84A8C84E1EED2F0C00AB31BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D535E11EED590900B6CB47 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				8472D2AF1EED306500E81232 /* Info.plist */,
-				8472D2B31EED314E00E81232 /* MainTests.swift */,
+				84D535E01EED590900B6CB47 /* CodableAlamofire */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -257,6 +254,14 @@
 				84A8C84E1EED2F0C00AB31BE /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D535E01EED590900B6CB47 /* CodableAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				84D535E11EED590900B6CB47 /* MainTests.swift */,
+			);
+			path = CodableAlamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,7 +606,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2B41EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +613,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2B51EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2B61EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
