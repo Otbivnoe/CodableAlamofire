@@ -8,13 +8,9 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "CodableAlamofire"
-  s.version      = "0.0.1"
-  s.summary      = "An extension for Alamofire that converts JSON data into Decodable Objects."
-  s.description  = <<-DESC
-  An extension for Alamofire that converts JSON data into Decodable Objects
-                   DESC
-
+  s.name               = "CodableAlamofire"
+  s.version            = "0.0.1"
+  s.summary            = "An extension for Alamofire that converts JSON data into Decodable Objects."
   s.homepage           = "https://github.com/Otbivnoe/CodableAlamofire"
   s.license            = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Nikita Ermolenko" => "gnod94@gmail.com" }

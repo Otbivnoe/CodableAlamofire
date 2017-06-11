@@ -9,11 +9,12 @@
 import Foundation
 import Alamofire
 
-enum AlamofireDecodableError: Error {
+public enum AlamofireDecodableError: Error {
     case invalidKeyPath
     case emptyKeyPath
 }
 
+// TODO: correct description
 extension AlamofireDecodableError: LocalizedError {
     
     public var errorDescription: String? {
