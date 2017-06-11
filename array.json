@@ -1,0 +1,14 @@
+[
+	{
+	    "name": "Alamofire",
+	    "stars": 23857,
+	    "url": "https://github.com/Alamofire/Alamofire",
+	    "random_date_commit": 1489276800
+	},
+	{
+	    "name": "RxSwift",
+	    "stars": 9600,
+	    "url": "https://github.com/ReactiveX/RxSwift",
+	    "random_date_commit": 1494547200
+	}	
+]
