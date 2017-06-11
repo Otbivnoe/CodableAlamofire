@@ -5,7 +5,7 @@
 //  Created by Nikita Ermolenko on 11/06/2017.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for CodableAlamofire.
 FOUNDATION_EXPORT double CodableAlamofireVersionNumber;
