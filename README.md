@@ -1,8 +1,9 @@
-# CodableAlamofire
+<p align="center">
+  <img src="http://i.imgur.com/x2E68WN.png" alt="CodableAlamofire"/>
+</p>
+
 ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
 ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
-[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 **Swift 4 introduces a new `Codable` protocol that lets you serialize and deserialize custom data types without writing any special code and without having to worry about losing your value types. 🎉**
 
