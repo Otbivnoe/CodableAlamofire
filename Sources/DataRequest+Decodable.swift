@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum AlamofireDecodableError: Error {
     case invalidKeyPath

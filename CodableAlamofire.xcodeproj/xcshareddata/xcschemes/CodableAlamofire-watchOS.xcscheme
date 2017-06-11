@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84A8C8191EED2EB800AB31BE"
-               BuildableName = "CodableAlamofire_watchOS.framework"
+               BuildableName = "CodableAlamofire.framework"
                BlueprintName = "CodableAlamofire-watchOS"
                ReferencedContainer = "container:CodableAlamofire.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84A8C8191EED2EB800AB31BE"
-            BuildableName = "CodableAlamofire_watchOS.framework"
+            BuildableName = "CodableAlamofire.framework"
             BlueprintName = "CodableAlamofire-watchOS"
             ReferencedContainer = "container:CodableAlamofire.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84A8C8191EED2EB800AB31BE"
-            BuildableName = "CodableAlamofire_watchOS.framework"
+            BuildableName = "CodableAlamofire.framework"
             BlueprintName = "CodableAlamofire-watchOS"
             ReferencedContainer = "container:CodableAlamofire.xcodeproj">
          </BuildableReference>

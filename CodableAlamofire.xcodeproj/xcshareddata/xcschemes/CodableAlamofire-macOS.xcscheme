@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84A8C8421EED2ED500AB31BE"
-               BuildableName = "CodableAlamofire_macOS.framework"
+               BuildableName = "CodableAlamofire.framework"
                BlueprintName = "CodableAlamofire-macOS"
                ReferencedContainer = "container:CodableAlamofire.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84A8C8421EED2ED500AB31BE"
-            BuildableName = "CodableAlamofire_macOS.framework"
+            BuildableName = "CodableAlamofire.framework"
             BlueprintName = "CodableAlamofire-macOS"
             ReferencedContainer = "container:CodableAlamofire.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84A8C8421EED2ED500AB31BE"
-            BuildableName = "CodableAlamofire_macOS.framework"
+            BuildableName = "CodableAlamofire.framework"
             BlueprintName = "CodableAlamofire-macOS"
             ReferencedContainer = "container:CodableAlamofire.xcodeproj">
          </BuildableReference>
