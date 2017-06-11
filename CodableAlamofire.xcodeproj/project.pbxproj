@@ -10,6 +10,9 @@
 		8472D28A1EED2FF800E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */; };
 		8472D2991EED300500E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8271EED2EC300AB31BE /* CodableAlamofire.framework */; };
 		8472D2A81EED301000E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8431EED2ED500AB31BE /* CodableAlamofire.framework */; };
+		8472D2B41EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
+		8472D2B51EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
+		8472D2B61EED314E00E81232 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2B31EED314E00E81232 /* MainTests.swift */; };
 		84A8C8501EED2F2700AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8511EED2F2700AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8521EED2F2800AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +48,7 @@
 		8472D2941EED300500E81232 /* CodableAlamofireTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2A31EED301000E81232 /* CodableAlamofireTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2AF1EED306500E81232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8472D2B31EED314E00E81232 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C81A1EED2EB800AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C8271EED2EC300AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				8472D2AF1EED306500E81232 /* Info.plist */,
+				8472D2B31EED314E00E81232 /* MainTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -332,12 +337,15 @@
 				TargetAttributes = {
 					8472D2841EED2FF700E81232 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					8472D2931EED300500E81232 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					8472D2A21EED301000E81232 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					84A8C7FA1EED2E8600AB31BE = {
 						CreatedOnToolsVersion = 9.0;
@@ -437,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8472D2B41EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8472D2B51EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8472D2B61EED314E00E81232 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +872,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -910,11 +922,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -931,6 +943,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -974,10 +987,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1047,7 +1060,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1057,7 +1070,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1111,7 +1124,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1121,7 +1134,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1129,6 +1142,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1181,7 +1195,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1189,7 +1203,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1199,6 +1213,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1244,14 +1259,14 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1262,6 +1277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1314,10 +1330,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1333,6 +1349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1379,9 +1396,9 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofire-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.otbivnoe.CodableAlamofire;
 				PRODUCT_NAME = CodableAlamofire;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
