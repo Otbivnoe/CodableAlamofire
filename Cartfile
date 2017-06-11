@@ -1,1 +1,1 @@
-github "Alamofire/Alamofire" ~> 4.4 
+github "Alamofire/Alamofire" "swift4"
