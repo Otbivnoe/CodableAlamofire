@@ -1,5 +1,84 @@
 # CodableAlamofire
-An extension for Alamofire that converts JSON data into Decodable Objects
+![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+
+**Swift 4 introduces a new `Codable` protocol that lets you serialize and deserialize custom data types without writing any special code and without having to worry about losing your value types. 🎉**
+
+**Awesome, isn't it? And this library helps you write less code! It's an extension for `Alamofire` that converts `JSON` data into `Decodable` object.**
+
+### Useful Resources:
+- [Encoding and Decoding Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types) - Article by Apple
+- [Using JSON with Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types) - Swift Playground
+- Also there is a special session from `WWDC2017` that covers this new feature - [What's New in Foundation](https://developer.apple.com/videos/play/wwdc2017/212/)
+
+# Usage
+
+Let's decode a simple json file:
+```
+{
+    "result": {
+        "libraries": [
+            {
+                "name": "Alamofire",
+                "stars": 23857,
+                "url": "https://github.com/Alamofire/Alamofire",
+                "random_date_commit": 1489276800
+            },
+            {
+                "name": "RxSwift",
+                "stars": 9600,
+                "url": "https://github.com/ReactiveX/RxSwift",
+                "random_date_commit": 1494547200
+            }	
+        ]
+    }
+}
+```
+
+with the following Swift model: 
+
+```swift
+private struct Repo: Decodable {
+    let name: String
+    let stars: Int
+    let url: URL
+    let randomDateCommit: Date
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case stars
+        case url
+        case randomDateCommit = "random_date_commit"
+    }
+}
+```
+
+There is a similar method to `responseData`, `responseJSON` - **`responseDecodableObject`**:
+
+```swift 
+func responseDecodableObject<T: Decodable>(queue: DispatchQueue? = nil, keyPath: String? = nil, decoder: JSONDecoder = JSONDecoder(), completionHandler: @escaping (DataResponse<T>) -> Void)
+```
+
+- `queue` - The queue on which the completion handler is dispatched.
+- `keyPath` - The keyPath where object decoding should be performed.
+- `decoder` - The decoder that performs the decoding of JSON into semantic `Decodable` type.
+
+```swift
+let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+let decoder = JSONDecoder()
+decoder.dateDecodingStrategy = .secondsSince1970 // It is necessary for correct decoding. Timestamp -> Date.
+
+Alamofire.request(url).responseDecodableObject(keyPath: "result.libraries", decoder: decoder) { (response: DataResponse<[Repo]>) in
+    let repo = response.result.value
+    print(repo)
+}
+```
+
+### Note: 
+ - For array: `DataResponse<[Repo]>`
+ - For single object: `DataResponse<Repo>`
 
 # Requirements
  - Swift 4+
