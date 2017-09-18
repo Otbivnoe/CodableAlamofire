@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*.{h,swift}"
 
   s.requires_arc = true
-  s.dependency 'Alamofire', '~> 4.4'
+  s.dependency 'Alamofire', '~> 4.0'
 
 end
