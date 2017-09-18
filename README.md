@@ -3,6 +3,7 @@
 </p>
 
 ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg)
 
 **Swift 4 introduces a new `Codable` protocol that lets you serialize and deserialize custom data types without writing any special code and without having to worry about losing your value types. 🎉**
@@ -95,20 +96,13 @@ Alamofire.request(url).responseDecodableObject(keyPath: "result.libraries", deco
 $ sudo gem install cocoapods
 ```
 
-Because of `Alamofire` supports Swift 3 at the moment and we can't point out the branch of dependency in `.podspec` file. 
-Whe have to overrride the current pod:
+To integrate CodableAlamofire, simply add the following line to your `Podfile`:
 
 ```ruby
-# TODO: Remove this after all pods are converted to swift 4
-def swift4_overrides
-    pod 'Alamofire', git: 'https://github.com/Alamofire/Alamofire.git', branch: 'swift4'
-end
-
 target 'Test' do
   use_frameworks!
 
-  swift4_overrides
-  pod 'CodableAlamofire', :git => 'https://github.com/Otbivnoe/CodableAlamofire.git'
+  pod 'CodableAlamofire'
   
 end
 ```
