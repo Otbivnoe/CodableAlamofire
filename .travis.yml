@@ -10,28 +10,28 @@ matrix:
     - xcode_scheme: CodableAlamofire-macOS
       language: objective-c
       env:
-        - XCODE_SDK=macosx10.12
+        - XCODE_SDK=macosx10.13
         - XCODE_ACTION="test"
         - XCODE_DESTINATION="arch=x86_64"
 
     - xcode_scheme: CodableAlamofire-iOS
       language: objective-c
       env:
-        - XCODE_SDK=iphonesimulator10.3
+        - XCODE_SDK=iphonesimulator11.0
         - XCODE_ACTION="test"
         - XCODE_DESTINATION="platform=iOS Simulator,OS=10.3,name=iPhone 6"
 
     - xcode_scheme: CodableAlamofire-tvOS
       language: objective-c
       env:
-        - XCODE_SDK=appletvsimulator10.2
+        - XCODE_SDK=appletvsimulator11.0
         - XCODE_ACTION="test"
         - XCODE_DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p"
 
     - xcode_scheme: CodableAlamofire-watchOS
       language: objective-c
       env:
-        - XCODE_SDK=watchsimulator3.2
+        - XCODE_SDK=wwatchsimulator4.0
         - XCODE_ACTION="build" 
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"
 install:   
@@ -40,6 +40,7 @@ install:
     fi
 script:    
     - if [[ `uname` == "Linux" ]] ; then
+        swift --version
         swift test;
       fi
 
