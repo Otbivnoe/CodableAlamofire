@@ -5,6 +5,6 @@ import PackageDescription
 let package = Package(
     name: "CodableAlamofire",
     dependencies : [
-   		.package(url: "https://github.com/Alamofire/Alamofire")
+   		.package(url: "https://github.com/Alamofire/Alamofire", from: "4.5.0")
     ]
 )
