@@ -19,21 +19,21 @@ matrix:
       env:
         - XCODE_SDK=iphonesimulator11.0
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=iOS Simulator,OS=10.3,name=iPhone 6"
+        - XCODE_DESTINATION="platform=iOS Simulator, OS=11.0, name=iPhone 6"
 
     - xcode_scheme: CodableAlamofire-tvOS
       language: objective-c
       env:
         - XCODE_SDK=appletvsimulator11.0
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p"
+        - XCODE_DESTINATION="platform=tvOS Simulator, OS=10.2, name=Apple TV 1080p"
 
     - xcode_scheme: CodableAlamofire-watchOS
       language: objective-c
       env:
-        - XCODE_SDK=wwatchsimulator4.0
+        - XCODE_SDK=watchsimulator4.0
         - XCODE_ACTION="build" 
-        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"
+        - XCODE_DESTINATION="platform=watchOS Simulator, name=Apple Watch - 38mm"
 install:   
   - if [[ `uname` == "Linux" ]] ; then 
         eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)";
