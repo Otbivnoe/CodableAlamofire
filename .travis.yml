@@ -1,0 +1,54 @@
+osx_image: xcode9
+xcode_project: CodableAlamofire.xcodeproj
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      language: generic
+
+    - xcode_scheme: CodableAlamofire-macOS
+      language: objective-c
+      env:
+        - XCODE_SDK=macosx10.12
+        - XCODE_ACTION="test"
+        - XCODE_DESTINATION="arch=x86_64"
+
+    - xcode_scheme: CodableAlamofire-iOS
+      language: objective-c
+      env:
+        - XCODE_SDK=iphonesimulator10.3
+        - XCODE_ACTION="test"
+        - XCODE_DESTINATION="platform=iOS Simulator,OS=10.3,name=iPhone 6"
+
+    - xcode_scheme: CodableAlamofire-tvOS
+      language: objective-c
+      env:
+        - XCODE_SDK=appletvsimulator10.2
+        - XCODE_ACTION="test"
+        - XCODE_DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p"
+
+    - xcode_scheme: CodableAlamofire-watchOS
+      language: objective-c
+      env:
+        - XCODE_SDK=watchsimulator3.2
+        - XCODE_ACTION="build" 
+        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"
+install:   
+  - if [[ `uname` == "Linux" ]] ; then 
+        eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)";
+    fi
+script:    
+    - if [[ `uname` == "Linux" ]] ; then
+        swift test;
+      fi
+
+    - if [[ `uname` == "Darwin" ]] ; then
+        set -o pipefail;
+        xcodebuild -version;
+        xcodebuild -showsdks;
+        instruments -s devices;
+        xcodebuild -project "$TRAVIS_XCODE_PROJECT" -scheme "$TRAVIS_XCODE_SCHEME" -sdk "$XCODE_SDK" -destination "$XCODE_DESTINATION" -configuration Debug ENABLE_TESTABILITY=YES $XCODE_ACTION | xcpretty;
+      fi
+after_success:
+    - sleep 5 # workaround https://github.com/travis-ci/travis-ci/issues/4725
