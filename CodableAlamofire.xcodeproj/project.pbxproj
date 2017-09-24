@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8447D5D91F77D5EE003B32F3 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5D21F77D5BC003B32F3 /* MainTests.swift */; };
+		8447D5DA1F77D5EE003B32F3 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5D21F77D5BC003B32F3 /* MainTests.swift */; };
+		8447D5DB1F77D5EF003B32F3 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5D21F77D5BC003B32F3 /* MainTests.swift */; };
+		846670281F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */; };
+		846670311F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */; };
+		846670321F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */; };
+		846670331F77D7FF00C119BC /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */; };
+		846670341F77D80100C119BC /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */; };
+		846670351F77D80100C119BC /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */; };
+		846670361F77D80100C119BC /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */; };
+		846670371F77D80200C119BC /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */; };
 		8472D28A1EED2FF800E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */; };
 		8472D2991EED300500E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8271EED2EC300AB31BE /* CodableAlamofire.framework */; };
 		8472D2A81EED301000E81232 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8C8431EED2ED500AB31BE /* CodableAlamofire.framework */; };
-		8472D2DA1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
-		8472D2DB1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
-		8472D2DC1EED3BF200E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
-		8472D2DD1EED3BF200E81232 /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */; };
 		8472D2F81EED3C5A00E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2EB1EED3C5400E81232 /* Alamofire.framework */; };
 		8472D2F91EED3C5F00E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2F71EED3C5400E81232 /* Alamofire.framework */; };
 		8472D2FA1EED3C6300E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2F31EED3C5400E81232 /* Alamofire.framework */; };
@@ -22,13 +29,6 @@
 		84A8C8511EED2F2700AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8521EED2F2800AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8531EED2F2800AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84D535E31EED5A5E00B6CB47 /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */; };
-		84D535E41EED5DD500B6CB47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E11EED590900B6CB47 /* MainTests.swift */; };
-		84D535E51EED5DD500B6CB47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E11EED590900B6CB47 /* MainTests.swift */; };
-		84D535E61EED5DD500B6CB47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E11EED590900B6CB47 /* MainTests.swift */; };
-		84D535E71EED645000B6CB47 /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */; };
-		84D535E81EED645000B6CB47 /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */; };
-		84D535E91EED645100B6CB47 /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,15 +105,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DataRequest+Decodable.swift"; path = "CodableAlamofire/DataRequest+Decodable.swift"; sourceTree = "<group>"; };
+		8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlamofireDecodableError.swift; path = CodableAlamofire/AlamofireDecodableError.swift; sourceTree = "<group>"; };
+		8447D5CA1F77D54E003B32F3 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		8447D5D21F77D5BC003B32F3 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTests.swift; path = CodableAlamofireTests/MainTests.swift; sourceTree = "<group>"; };
+		8447D5D71F77D5E2003B32F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8472D2851EED2FF700E81232 /* CodableAlamofireTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2941EED300500E81232 /* CodableAlamofireTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472D2A31EED301000E81232 /* CodableAlamofireTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodableAlamofireTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8472D2AF1EED306500E81232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8472D2B81EED3B4C00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2B91EED3B5B00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2BA1EED3B8200E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2BB1EED3B8C00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-appletvos/Alamofire.framework"; sourceTree = "<group>"; };
-		8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Decodable.swift"; sourceTree = "<group>"; };
 		8472D2DE1EED3C4E00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-appletvos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2DF1EED3C5400E81232 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +125,6 @@
 		84A8C8431EED2ED500AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodableAlamofire.h; sourceTree = "<group>"; };
 		84A8C84E1EED2F0C00AB31BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D535E11EED590900B6CB47 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
-		84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,11 +187,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8447D5D31F77D5E2003B32F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8447D5D71F77D5E2003B32F3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8472D2AE1EED306500E81232 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8472D2AF1EED306500E81232 /* Info.plist */,
-				84D535E01EED590900B6CB47 /* CodableAlamofire */,
+				8447D5CA1F77D54E003B32F3 /* LinuxMain.swift */,
+				8447D5D21F77D5BC003B32F3 /* MainTests.swift */,
+				8447D5D31F77D5E2003B32F3 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -249,8 +259,8 @@
 		84A8C84B1EED2F0C00AB31BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8472D2D91EED3BE500E81232 /* DataRequest+Decodable.swift */,
-				84D535E21EED5A5E00B6CB47 /* AlamofireDecodableError.swift */,
+				8447D5C91F77D4AE003B32F3 /* AlamofireDecodableError.swift */,
+				8447D5C81F77D4AE003B32F3 /* DataRequest+Decodable.swift */,
 				84A8C84C1EED2F0C00AB31BE /* Supporting Files */,
 			);
 			path = Sources;
@@ -263,14 +273,6 @@
 				84A8C84E1EED2F0C00AB31BE /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		84D535E01EED590900B6CB47 /* CodableAlamofire */ = {
-			isa = PBXGroup;
-			children = (
-				84D535E11EED590900B6CB47 /* MainTests.swift */,
-			);
-			path = CodableAlamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,10 +451,12 @@
 					8472D2841EED2FF700E81232 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					8472D2931EED300500E81232 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					8472D2A21EED301000E81232 = {
 						CreatedOnToolsVersion = 9.0;
@@ -615,7 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D535E41EED5DD500B6CB47 /* MainTests.swift in Sources */,
+				8447D5D91F77D5EE003B32F3 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D535E51EED5DD500B6CB47 /* MainTests.swift in Sources */,
+				8447D5DA1F77D5EE003B32F3 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D535E61EED5DD500B6CB47 /* MainTests.swift in Sources */,
+				8447D5DB1F77D5EF003B32F3 /* MainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,8 +643,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D535E31EED5A5E00B6CB47 /* AlamofireDecodableError.swift in Sources */,
-				8472D2DD1EED3BF200E81232 /* DataRequest+Decodable.swift in Sources */,
+				846670281F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */,
+				846670341F77D80100C119BC /* DataRequest+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,8 +652,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2DA1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */,
-				84D535E71EED645000B6CB47 /* AlamofireDecodableError.swift in Sources */,
+				846670311F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */,
+				846670351F77D80100C119BC /* DataRequest+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,8 +661,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2DC1EED3BF200E81232 /* DataRequest+Decodable.swift in Sources */,
-				84D535E81EED645000B6CB47 /* AlamofireDecodableError.swift in Sources */,
+				846670331F77D7FF00C119BC /* AlamofireDecodableError.swift in Sources */,
+				846670361F77D80100C119BC /* DataRequest+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,8 +670,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8472D2DB1EED3BF100E81232 /* DataRequest+Decodable.swift in Sources */,
-				84D535E91EED645100B6CB47 /* AlamofireDecodableError.swift in Sources */,
+				846670321F77D7FE00C119BC /* AlamofireDecodableError.swift in Sources */,
+				846670371F77D80200C119BC /* DataRequest+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,8 +725,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -739,15 +745,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofireTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,8 +791,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -795,13 +805,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofireTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -837,8 +849,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -855,14 +869,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofireTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -898,8 +914,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -910,12 +928,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofireTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -972,7 +992,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -981,6 +1001,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1028,13 +1049,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.otbivnoe.CodableAlamofireTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1168,7 +1190,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1236,7 +1258,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

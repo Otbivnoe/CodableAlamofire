@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
@@ -33,9 +34,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8472D2931EED300500E81232"
-               BuildableName = "CodableAlamofireTests-tvOS.xctest"
-               BlueprintName = "CodableAlamofireTests-tvOS"
+               BlueprintIdentifier = "8472D2A21EED301000E81232"
+               BuildableName = "CodableAlamofireTests-macOS.xctest"
+               BlueprintName = "CodableAlamofireTests-macOS"
                ReferencedContainer = "container:CodableAlamofire.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,6 +57,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
