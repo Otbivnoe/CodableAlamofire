@@ -25,6 +25,10 @@
 		8472D2F91EED3C5F00E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2F71EED3C5400E81232 /* Alamofire.framework */; };
 		8472D2FA1EED3C6300E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2F31EED3C5400E81232 /* Alamofire.framework */; };
 		8472D2FB1EED3C6A00E81232 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472D2EF1EED3C5400E81232 /* Alamofire.framework */; };
+		84A389C52233CCC200A0A66A /* keypathArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A389BA2233CCC200A0A66A /* keypathArray.json */; };
+		84A389C62233CCC200A0A66A /* keypathObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A389BB2233CCC200A0A66A /* keypathObject.json */; };
+		84A389C72233CCC200A0A66A /* object.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A389BC2233CCC200A0A66A /* object.json */; };
+		84A389CB2233D9F500A0A66A /* emptyKeypath.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A389CA2233D9F500A0A66A /* emptyKeypath.json */; };
 		84A8C8501EED2F2700AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8511EED2F2700AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84A8C8521EED2F2800AB31BE /* CodableAlamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A8C84D1EED2F0C00AB31BE /* CodableAlamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +123,10 @@
 		8472D2BB1EED3B8C00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-appletvos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2DE1EED3C4E00E81232 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-appletvos/Alamofire.framework"; sourceTree = "<group>"; };
 		8472D2DF1EED3C5400E81232 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Carthage/Checkouts/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		84A389BA2233CCC200A0A66A /* keypathArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keypathArray.json; sourceTree = "<group>"; };
+		84A389BB2233CCC200A0A66A /* keypathObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = keypathObject.json; sourceTree = "<group>"; };
+		84A389BC2233CCC200A0A66A /* object.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = object.json; sourceTree = "<group>"; };
+		84A389CA2233D9F500A0A66A /* emptyKeypath.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptyKeypath.json; sourceTree = "<group>"; };
 		84A8C7FB1EED2E8600AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C81A1EED2EB800AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8C8271EED2EC300AB31BE /* CodableAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +208,7 @@
 			children = (
 				8447D5CA1F77D54E003B32F3 /* LinuxMain.swift */,
 				8447D5D21F77D5BC003B32F3 /* MainTests.swift */,
+				84A389B92233CCC200A0A66A /* Mock */,
 				8447D5D31F77D5E2003B32F3 /* Supporting Files */,
 			);
 			path = Tests;
@@ -229,6 +238,17 @@
 				8472D2F71EED3C5400E81232 /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		84A389B92233CCC200A0A66A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				84A389BA2233CCC200A0A66A /* keypathArray.json */,
+				84A389BB2233CCC200A0A66A /* keypathObject.json */,
+				84A389BC2233CCC200A0A66A /* object.json */,
+				84A389CA2233D9F500A0A66A /* emptyKeypath.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		84A8C7EF1EED2E4D00AB31BE = {
@@ -588,6 +608,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A389C72233CCC200A0A66A /* object.json in Resources */,
+				84A389C52233CCC200A0A66A /* keypathArray.json in Resources */,
+				84A389CB2233D9F500A0A66A /* emptyKeypath.json in Resources */,
+				84A389C62233CCC200A0A66A /* keypathObject.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

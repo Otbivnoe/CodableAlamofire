@@ -40,7 +40,7 @@ final class MainTests: XCTestCase {
     ]
     
     func testResponseSimpleObject() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/object.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/object.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         let decoder = JSONDecoder()
@@ -64,7 +64,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseArrayOfObjects() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/array.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/array.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         let decoder = JSONDecoder()
@@ -94,7 +94,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseArrayOfObjectsByKeyPath() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         let decoder = JSONDecoder()
@@ -124,7 +124,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseWithEmptyKeyPath() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         Alamofire.request(url).responseDecodableObject(keyPath: "") { (response: DataResponse<[Repo]>) in
@@ -144,7 +144,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseWithInvalidKeyPath() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathArray.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         Alamofire.request(url).responseDecodableObject(keyPath: "keypath") { (response: DataResponse<[Repo]>) in
@@ -164,7 +164,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseWithWrongPropertyKeyObject() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/object.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/object.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         Alamofire.request(url).responseDecodableObject { (response: DataResponse<NotMappableRepo>) in
@@ -184,7 +184,7 @@ final class MainTests: XCTestCase {
     }
     
     func testResponseWithWrongPropertyKeyObjectByKeyPath() {
-        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/keypathObject.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathObject.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
         Alamofire.request(url).responseDecodableObject(keyPath: "result.library") { (response: DataResponse<NotMappableRepo>) in
@@ -198,6 +198,26 @@ final class MainTests: XCTestCase {
             expectation.fulfill()
         }
         
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
+    }
+
+    func testResponseWithInvalidNestedJSONByKeypath() {
+        let url = URL(string: "https://raw.githubusercontent.com/Otbivnoe/CodableAlamofire/master/Tests/Mock/emptyKeypath.json")!
+        let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
+
+        Alamofire.request(url).responseDecodableObject(keyPath: "data") { (response: DataResponse<NotMappableRepo>) in
+            XCTAssertNotNil(response.error)
+            if case AlamofireDecodableError.invalidJSON = response.error! {
+                XCTAssertTrue(true)
+            }
+            else {
+                XCTAssertTrue(false)
+            }
+            expectation.fulfill()
+        }
+
         waitForExpectations(timeout: 10) { error in
             XCTAssertNil(error)
         }

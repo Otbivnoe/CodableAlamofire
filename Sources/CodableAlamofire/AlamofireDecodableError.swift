@@ -11,10 +11,12 @@ import Foundation
 ///
 /// - invalidKeyPath:   Returned when a nested dictionary object doesn't exist by special keyPath.
 /// - emptyKeyPath:     Returned when a keyPath is empty.
+/// - invalidJSON:      Returned when a nested json is invalid.
 
 public enum AlamofireDecodableError: Error {
     case invalidKeyPath
     case emptyKeyPath
+    case invalidJSON
 }
 
 extension AlamofireDecodableError: LocalizedError {
@@ -23,6 +25,7 @@ extension AlamofireDecodableError: LocalizedError {
         switch self {
         case .invalidKeyPath:   return "Nested object doesn't exist by this keyPath."
         case .emptyKeyPath:     return "KeyPath can not be empty."
+        case .invalidJSON:      return "Invalid nested json."
         }
     }
 }
