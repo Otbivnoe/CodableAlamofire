@@ -1,9 +1,14 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "CodableAlamofire",
+    platforms: [
+        .iOS(.v11),
+        .tvOS(.v13),
+        .watchOS(.v6)
+    ],
     products: [
         .library(name: "CodableAlamofire", targets: ["CodableAlamofire"]),
     ],
