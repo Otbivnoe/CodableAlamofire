@@ -3,7 +3,7 @@
 </p>
 
 [![Build Status](https://travis-ci.org/Otbivnoe/CodableAlamofire.svg?branch=master)](https://travis-ci.org/Otbivnoe/CodableAlamofire)
-![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift 5.x](https://img.shields.io/badge/Swift-5.x-orange)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/CodableAlamofire.svg?style=flat)](http://cocoadocs.org/docsets/CodableAlamofire)
@@ -63,7 +63,7 @@ private struct Repo: Decodable {
 There is a similar method to `responseData`, `responseJSON` - **`responseDecodableObject`**:
 
 ```swift 
-func responseDecodableObject<T: Decodable>(queue: DispatchQueue? = nil, keyPath: String? = nil, decoder: JSONDecoder = JSONDecoder(), completionHandler: @escaping (DataResponse<T>) -> Void)
+func responseDecodableObject<T: Decodable>(queue: DispatchQueue? = nil, keyPath: String? = nil, decoder: JSONDecoder = JSONDecoder(), completionHandler: @escaping (AFDataResponse<T>) -> Void)
 ```
 
 - `queue` - The queue on which the completion handler is dispatched.
@@ -75,8 +75,8 @@ let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofi
 let decoder = JSONDecoder()
 decoder.dateDecodingStrategy = .secondsSince1970 // It is necessary for correct decoding. Timestamp -> Date.
 
-Alamofire.request(url).responseDecodableObject(keyPath: "result.libraries", decoder: decoder) { (response: DataResponse<[Repo]>) in
-    let repo = response.result.value
+AF.request(url).responseDecodableObject(keyPath: "result.libraries", decoder: decoder) { (response: AFDataResponse<[Repo]>) in
+    let repo = response.value
     print(repo)
 }
 ```

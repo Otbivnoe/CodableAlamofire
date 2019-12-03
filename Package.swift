@@ -5,16 +5,16 @@ import PackageDescription
 let package = Package(
     name: "CodableAlamofire",
     platforms: [
-        .iOS(.v8),
-        .tvOS(.v9),
-        .watchOS(.v2),
-        .macOS(.v10_10)
+        .iOS(.v10),
+        .tvOS(.v10),
+        .watchOS(.v3),
+        .macOS(.v10_12)
     ],
     products: [
         .library(name: "CodableAlamofire", targets: ["CodableAlamofire"]),
     ],
     dependencies: [
-   		.package(url: "https://github.com/Alamofire/Alamofire", from: "4.5.0")
+   		.package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0-rc.3")
     ],	
     targets: [
     	.target(

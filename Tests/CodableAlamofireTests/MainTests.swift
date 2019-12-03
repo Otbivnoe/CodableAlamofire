@@ -45,9 +45,9 @@ final class MainTests: XCTestCase {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        
-        Alamofire.request(url).responseDecodableObject(decoder: decoder) { (response: DataResponse<Repo>) in
-            let repo = response.result.value
+
+        AF.request(url).responseDecodableObject(decoder: decoder) { (response: AFDataResponse<Repo>) in
+            let repo = response.value
             
             XCTAssertNotNil(repo, "Result should not be nil")
             XCTAssertEqual(repo?.name, "Alamofire")
@@ -70,8 +70,8 @@ final class MainTests: XCTestCase {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         
-        Alamofire.request(url).responseDecodableObject(decoder: decoder) { (response: DataResponse<[Repo]>) in
-            let repos = response.result.value
+        AF.request(url).responseDecodableObject(decoder: decoder) { (response: AFDataResponse<[Repo]>) in
+            let repos = response.value
             
             XCTAssertNotNil(repos, "Result should not be nil")
             
@@ -100,8 +100,8 @@ final class MainTests: XCTestCase {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         
-        Alamofire.request(url).responseDecodableObject(keyPath: "result.libraries", decoder: decoder) { (response: DataResponse<[Repo]>) in
-            let repos = response.result.value
+        AF.request(url).responseDecodableObject(keyPath: "result.libraries", decoder: decoder) { (response: AFDataResponse<[Repo]>) in
+            let repos = response.value
             
             XCTAssertNotNil(repos, "Result should not be nil")
             
@@ -127,9 +127,9 @@ final class MainTests: XCTestCase {
         let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
-        Alamofire.request(url).responseDecodableObject(keyPath: "") { (response: DataResponse<[Repo]>) in
+        AF.request(url).responseDecodableObject(keyPath: "") { (response: AFDataResponse<[Repo]>) in
             XCTAssertNotNil(response.error)
-            if case AlamofireDecodableError.emptyKeyPath = response.error! {
+            if case AFError.responseSerializationFailed(reason: .decodingFailed(error: AlamofireDecodableError.emptyKeyPath)) = response.error! {
                 XCTAssertTrue(true)
             }
             else {
@@ -147,9 +147,9 @@ final class MainTests: XCTestCase {
         let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathArray.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
-        Alamofire.request(url).responseDecodableObject(keyPath: "keypath") { (response: DataResponse<[Repo]>) in
+        AF.request(url).responseDecodableObject(keyPath: "keypath") { (response: AFDataResponse<[Repo]>) in
             XCTAssertNotNil(response.error)
-            if case AlamofireDecodableError.invalidKeyPath = response.error! {
+            if case AFError.responseSerializationFailed(reason: .decodingFailed(error: AlamofireDecodableError.invalidKeyPath)) = response.error! {
                 XCTAssertTrue(true)
             }
             else {
@@ -167,9 +167,9 @@ final class MainTests: XCTestCase {
         let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/object.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
-        Alamofire.request(url).responseDecodableObject { (response: DataResponse<NotMappableRepo>) in
+        AF.request(url).responseDecodableObject { (response: AFDataResponse<NotMappableRepo>) in
             XCTAssertNotNil(response.error)
-            if case DecodingError.keyNotFound = response.error! {
+            if case AFError.responseSerializationFailed(reason: .customSerializationFailed(error: DecodingError.keyNotFound)) = response.error! {
                 XCTAssertTrue(true)
             }
             else {
@@ -187,9 +187,9 @@ final class MainTests: XCTestCase {
         let url = URL(string: "https://raw.githubusercontent.com/otbivnoe/CodableAlamofire/master/Tests/Mock/keypathObject.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
         
-        Alamofire.request(url).responseDecodableObject(keyPath: "result.library") { (response: DataResponse<NotMappableRepo>) in
+        AF.request(url).responseDecodableObject(keyPath: "result.library") { (response: AFDataResponse<NotMappableRepo>) in
             XCTAssertNotNil(response.error)
-            if case DecodingError.keyNotFound = response.error! {
+            if case AFError.responseSerializationFailed(reason: .customSerializationFailed(error: DecodingError.keyNotFound)) = response.error! {
                 XCTAssertTrue(true)
             }
             else {
@@ -207,9 +207,9 @@ final class MainTests: XCTestCase {
         let url = URL(string: "https://raw.githubusercontent.com/Otbivnoe/CodableAlamofire/master/Tests/Mock/emptyKeypath.json")!
         let expectation = self.expectation(description: "Reponse from \(url.absoluteString)")
 
-        Alamofire.request(url).responseDecodableObject(keyPath: "data") { (response: DataResponse<NotMappableRepo>) in
+        AF.request(url).responseDecodableObject(keyPath: "data") { (response: AFDataResponse<NotMappableRepo>) in
             XCTAssertNotNil(response.error)
-            if case AlamofireDecodableError.invalidJSON = response.error! {
+            if case AFError.responseSerializationFailed(reason: .decodingFailed(error: AlamofireDecodableError.invalidJSON)) = response.error! {
                 XCTAssertTrue(true)
             }
             else {
