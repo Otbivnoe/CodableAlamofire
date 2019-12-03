@@ -1,42 +1,44 @@
-osx_image: xcode11
+osx_image: xcode10.2
 xcode_project: CodableAlamofire.xcodeproj
 matrix:
   include:
-    - os: linux
-      dist: trusty
-      sudo: required
-      language: generic
+    - osx_image:  
+      os: linux 
+      env: TEST=Unix swift=5.0
 
     - xcode_scheme: CodableAlamofire-macOS
       language: objective-c
       env:
-        - XCODE_SDK=macosx10.13
+        - XCODE_SDK=macosx10.14
         - XCODE_ACTION="test"
         - XCODE_DESTINATION="arch=x86_64"
 
     - xcode_scheme: CodableAlamofire-iOS
       language: objective-c
       env:
-        - XCODE_SDK=iphonesimulator11.0
+        - XCODE_SDK=iphonesimulator12.2
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=iOS Simulator,OS=11.0,name=iPhone 6"
+        - XCODE_DESTINATION="platform=iOS Simulator,OS=12.2,name=iPhone 6"
 
     - xcode_scheme: CodableAlamofire-tvOS
       language: objective-c
       env:
-        - XCODE_SDK=appletvsimulator11.0
+        - XCODE_SDK=appletvsimulator12.2
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV 1080p"
+        - XCODE_DESTINATION="platform=tvOS Simulator,OS=12.2,name=Apple TV"
 
     - xcode_scheme: CodableAlamofire-watchOS
       language: objective-c
       env:
-        - XCODE_SDK=watchsimulator4.0
+        - XCODE_SDK=watchsimulator5.2
         - XCODE_ACTION="build" 
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"
 install:   
-  - if [[ `uname` == "Linux" ]] ; then 
-        eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)";
+  - if [[ `uname` == "Linux" ]] ; then
+      curl "https://swift.org/builds/swift-${swift}-release/ubuntu1604/swift-${swift}-RELEASE/swift-${swift}-RELEASE-ubuntu16.04.tar.gz" > /tmp/swift.tar.gz;
+      tar -xzf /tmp/swift.tar.gz -C /tmp;
+      export PATH="${PATH}:/tmp/swift-${swift}-RELEASE-ubuntu16.04/usr/bin";
+      swift -version;
     fi
 script:    
     - if [[ `uname` == "Linux" ]] ; then
