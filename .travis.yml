@@ -1,36 +1,38 @@
-osx_image: xcode10.2
+osx_image: xcode11.3
+language: generic
+os: osx
 xcode_project: CodableAlamofire.xcodeproj
 matrix:
   include:
     - osx_image:  
       os: linux 
-      env: TEST=Unix swift=5.0
+      env: TEST=Unix swift=5.1
 
     - xcode_scheme: CodableAlamofire-macOS
       language: objective-c
       env:
-        - XCODE_SDK=macosx10.14
+        - XCODE_SDK=macosx10.15
         - XCODE_ACTION="test"
         - XCODE_DESTINATION="arch=x86_64"
 
     - xcode_scheme: CodableAlamofire-iOS
       language: objective-c
       env:
-        - XCODE_SDK=iphonesimulator12.2
+        - XCODE_SDK=iphonesimulator13.2
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=iOS Simulator,OS=12.2,name=iPhone 6"
+        - XCODE_DESTINATION="platform=iOS Simulator,OS=13.1,name=iPhone 8"
 
     - xcode_scheme: CodableAlamofire-tvOS
       language: objective-c
       env:
-        - XCODE_SDK=appletvsimulator12.2
+        - XCODE_SDK=appletvsimulator13.2
         - XCODE_ACTION="test"
-        - XCODE_DESTINATION="platform=tvOS Simulator,OS=12.2,name=Apple TV"
+        - XCODE_DESTINATION="platform=tvOS Simulator,OS=13.2,name=Apple TV"
 
     - xcode_scheme: CodableAlamofire-watchOS
       language: objective-c
       env:
-        - XCODE_SDK=watchsimulator5.2
+        - XCODE_SDK=watchsimulator6.1
         - XCODE_ACTION="build" 
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"
 install:   

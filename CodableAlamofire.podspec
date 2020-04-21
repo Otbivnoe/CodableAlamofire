@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name               = "CodableAlamofire"
-  s.version            = "1.2.0"
+  s.version            = "1.2.1"
   s.summary            = "An extension for Alamofire that converts JSON data into Decodable Objects."
   s.homepage           = "https://github.com/Otbivnoe/CodableAlamofire"
   s.license            = { :type => "MIT", :file => "LICENSE" }
@@ -26,6 +26,6 @@ Pod::Spec.new do |s|
   s.swift_versions = ['4.0', '5.0', '5.1']
 
   s.requires_arc = true
-  s.dependency 'Alamofire', '~> 5.0.0-rc.3'
+  s.dependency 'Alamofire', '~> 5.1.0'
 
 end
