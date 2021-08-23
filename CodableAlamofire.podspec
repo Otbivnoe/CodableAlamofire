@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name               = "CodableAlamofire"
-  s.version            = "1.1.2"
+  s.version            = "2.0.0"
   s.summary            = "An extension for Alamofire that converts JSON data into Decodable Objects."
   s.homepage           = "https://github.com/Otbivnoe/CodableAlamofire"
   s.license            = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Nikita Ermolenko" => "gnod94@gmail.com" }
   s.social_media_url   = "https://twitter.com/iOtbivnoe"
 
-  s.ios.deployment_target     = '10.0'
+  s.ios.deployment_target     = '9.0'
   s.osx.deployment_target     = '10.10'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target    = '9.0'
